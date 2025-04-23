@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 31 - CSS Background</title>
+    <style>
+        .div1{
+            background-image: url("imagemBackground.jpg");
+            background-size: 600px 300px;
+            width: 600px;
+            height: 300px;
+            border-left: solid red 4px;
+            color: aliceblue;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .div2{
+            background-repeat: repeat-x;
+            background-image: url("imagemBackground2.jpg");
+            background-size: 50px 50px;
+            width: 80%;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Exemplo 31 - CSS / Background</h1>
+        <p>Background refere-se em HTML ao fundo dos elementos. Ele pode ser aplicado de diferentes formas, por exemplo: mudando a cor de fundo, colocando imagens em diferentes posições e tamanhos.</p>
+    </div>
+    <div  class="div1">
+        <h2>Background image</h2>
+        <p>Neste caso a imagem é usada como plano de fundo do elemento. Neste exemplo vamos usar uma imagem nesta div como fundo da div. O background image pode ser usado para personalizar toda a página ou apenas parte dela.</p>
+    </div>
+    <div class="div2">
+        <h2>Background repeat</h2>
+        <p>A propriedade background é utilizada de forma que se tenha o controle de repetição da imagem nos eixos x e y. </p>
+    </div>
+</body>
+</html>
