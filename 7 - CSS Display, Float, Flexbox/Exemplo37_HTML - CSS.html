@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 37 - Flexbox</title>
+    <style>
+        .div1{
+            border-left: solid red 8px;
+            padding: 25px;
+            margin: 20px;
+            box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: justify;
+        }
+        .flex-container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 200px;
+            margin: 20px;
+            border: solid pink 1px;
+        }
+        .flex-container>div{
+            background-color: rgb(233,5,166);
+            color: white;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+            width: 40%;
+        }
+        div{
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="div1">
+    <div>
+        <h1>Exemplo 37 - Flex box</h1>
+        <p>O flexbox é um dos sistemas mais importantes para criar layouts responsivos modernos. Ele permite que criemos layouts complexos de formas simples. </p>
+        <P>Para utilizá-lo precisamos usar a propriedade display com a opção flex. Neste exemplo, usamos alguns recursos fundamentais da sua estrutura.</P>
+        <p>Neste exemplo, mostraremos a utilização das propriedades flexdirection que possui propriedades que permitem que um elemento possa organizado no sentido horizontal ou vertical.</p>
+        <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+    </div>
+</body>
+</html>
