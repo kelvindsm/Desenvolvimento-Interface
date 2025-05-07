@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 40 HTML - CSS</title>
+    <style>
+        .wrapper{
+            display: flex;
+            flex-flow: row wrap;
+            font-weight: bold;
+            text-align: center;
+        }
+        .wrapper>*{
+            padding: 10px;
+            flex:1 100%;
+        }
+        .header{
+            background-color: tomato;
+        }
+        .footer{
+            background-color: lightgreen;
+        }
+        .main{
+            text-align: justify;
+            background-color: deepskyblue;
+        }
+        .aside-1{
+            background: gold;
+        }
+        .aside-2{
+            background: hotpink;
+        }
+        @media all and (min-width:600px){
+            .aside{
+                flex:1 0 0;
+            }
+        }
+        @media all and (min-width:800px){
+            .main{
+                flex:3 0px;
+            }
+            .aside-1{
+                order: 1;
+            }
+            .main{
+                order: 2;
+            }
+            .aside-2{
+                order: 3;
+            }
+            .footer{
+                order: 4;
+            }
+            body{
+                padding: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">Header</header>
+        <article class="main">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt neque nostrum qui quidem at fugit nulla rerum veniam nemo distinctio et perferendis esse fuga recusandae vitae optio ea, voluptatibus asperiores!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe porro, at placeat corrupti ipsa dolor ipsum rem blanditiis odio, cumque velit praesentium qui fuga odit expedita facere! Obcaecati, aliquid unde.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ea cum dolorem praesentium quas, facilis, ut consequuntur optio, corporis error accusamus beatae mollitia qui hic neque? Reiciendis sed atque hic.</p>
+        </article>
+        <aside class="aside aside-1">
+            aside1
+        </aside>
+        <aside class="aside aside-2">
+            aside2
+        </aside>
+        <footer class="footer">Footer</footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 43 HTML CSS</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .container{
+            display: grid;
+            font-family: Arial, Helvetica, sans-serif;
+            grid-gap: 1rem;
+            grid-template-areas:
+                "header header"
+                "aside main"
+                "footer footer";
+            grid-template-columns: auto auto;
+            grid-template-rows: 10% 1fr 10%;
+            height: 100vh;
+        }
+        header, main, aside, footer{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 5rem;
+        }
+        header{
+            background-color: lightcoral;
+            grid-area: header;
+        }
+        main{
+            background-color: lightgreen;
+            grid-area: main;
+        }
+        aside{
+            background-color: lightgoldenrodyellow;
+            grid-area: aside;
+        }
+        footer{
+            background-color: coral;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>1</header>
+        <main>2</main>
+        <aside>3</aside>
+        <footer>4</footer>
+    </div>
+</body>
+</html>
