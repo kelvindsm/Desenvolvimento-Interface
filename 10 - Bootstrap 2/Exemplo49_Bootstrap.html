@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/roboto-font@0.1.0/css/fonts.min.css" rel="stylesheet">
+    <title>Exemplo 49 - Bootstrap</title>
+    <style>
+        .painel {
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+            font-weight: bold;
+            font-family: 'Roboto', sans-serif;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-sm mt-4">
+        <h1>Exemplo bootstrap com Cards</h1>
+        <div class="card painel">
+            <div class="card-header bg-dark text-white">
+                Cadastro de gerente
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="">Nome</label>
+                    <input type="text" name="txtNome" id="txtNome" class="form-control">
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="">CPF</label>
+                        <input type="text" name="txtCPF" id="txtCPF" class="form-control">
+                    </div>
+                    <div class="col-3">
+                        <label for="">Salario</label>
+                        <input type="text" name="txtSalario" id="txtSalario" class="form-control">
+                    </div>
+                    <div class="col-3">
+                        <label for="">Senha</label>
+                        <input type="text" name="txtSenha" id="txtSenha" class="form-control">
+                    </div>
+                </div>
+                <div class="pt-4">
+                    <label for="">Funcionarios cadastrados</label>
+                    <table class="table container-sm table-bordered table-hover">
+                        <thead class="bg-dark text-white">
+                            <tr>
+                                <th scope="col">CPF</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Salario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">555.555.555-55</th>
+                                <td>Maria das couves</td>
+                                <td>R$ 20.000,00</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">555.555.555-55</th>
+                                <td>Mario das couves</td>
+                                <td>R$ 20.000,00</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">555.555.555-55</th>
+                                <td>Tereza das couves</td>
+                                <td>R$ 20.000,00</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">555.555.555-55</th>
+                                <td>Lara das couves</td>
+                                <td>R$ 20.000,00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="form-group">
+                    <button type="button" class="btn btn-dark form-control">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
