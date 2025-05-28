@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Exemplo 52 - Javascript</title>
+</head>
+
+<body>
+    <div class="container-sm pt-4">
+        <h1>Exemplo 52 Javascript</h1>
+        <h2>Calculo de área de um triangulo</h2>
+        <div class="form-group pt-4">
+            <label for="">Informe a base do triângulo</label>
+            <input type="text" name="txtBaseTriangulo" id="txtBaseTriangulo" class="form-control pt-4">
+        </div>
+        <div class="form-group pt-4">
+            <label for="">Informe a base do triângulo</label>
+            <input type="text" name="txtAlturaTriangulo" id="txtAlturaTriangulo" class="form-control pt-4">
+        </div>
+        <div class="form-group pt-4">
+            <button type="button" class="btn btn-primary form-control" onclick="calcularAreaTriangulo()">Calcular a área do triângulo</button>
+        </div>
+        <div class="form-group pt-4">
+            <h2 id="resultado"></h2>
+
+        </div>
+    </div>
+    <script>
+        function calcularAreaTriangulo(){
+            var base = document.getElementById("txtBaseTriangulo").value;
+            var altura = document.getElementById("txtAlturaTriangulo").value;
+            var areaTriangulo = (base * altura) / 2;
+            document.getElementById("resultado").innerHTML = "A área do triangulo é:" + areaTriangulo;
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
