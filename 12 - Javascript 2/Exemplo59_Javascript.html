@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Exemplo 59 Javascript</title>
+</head>
+
+<body>
+    <div class="container-sm">
+        <h1>Exemplo 59 Javascript</h1>
+        <div class="alert alert-warning" role="alert">
+            <h2>Uso dos métodos: push, pop, sort, lastIndexOf e IndexOf</h2>
+            <script>
+                var vetor1 = [];
+                vetor1.push("José");
+                vetor1.push("Maria");
+                vetor1.push("João");
+                vetor1.push("Rafael");
+                vetor1.push("Carlos");
+                vetor1.push("Lara");
+                vetor1.push("Liris");
+                vetor1.push("Michelle");
+                vetor1.push("Reinaldo");
+                document.write(vetor1);
+                document.write("<br>");
+                document.write("Usando o método pop para retirar o último elemento da lista");
+                vetor1.pop();
+                vetor1.pop();
+                document.write("vetor1 após o uso duas vezes do método pop:" + vetor1);
+                document.write("<br>");
+                document.write("Usando o método IndexOf para descobrir a partir de um elemento o valor do seu índice.");
+                var indice = vetor1.indexOf("Rafael");
+                document.write("<br>");
+                document.writeln(" O índice onde está armazenado a palavra Rafael é " + indice);
+                vetor1.push("Maria");
+                vetor1.push("Maria");
+                vetor1.push("Maria");
+                var indice2 = vetor1.lastIndexOf("Maria");
+                document.writeln(" O índice onde está armazenado a palavra Maria usando o lastindexof é " + indice2);
+                document.write("<br>");
+                document.write("Usando o método Sort para ordenar o vetor1");
+                vetor1.sort();
+                document.write("<br>");
+                document.write(vetor1);
+            </script>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

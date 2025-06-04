@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Exemplo 55 - Javascript</title>
+    <style>
+        /* From Uiverse.io by mrhyddenn */
+        button {
+            position: relative;
+            padding: 10px 20px;
+            border-radius: 7px;
+            border: 1px solid rgb(61, 106, 255);
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 2px;
+            background: transparent;
+            color: #fff;
+            overflow: hidden;
+            box-shadow: 0 0 0 0 transparent;
+            -webkit-transition: all 0.2s ease-in;
+            -moz-transition: all 0.2s ease-in;
+            transition: all 0.2s ease-in;
+        }
+
+        button:hover {
+            background: rgb(61, 106, 255);
+            box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+            -webkit-transition: all 0.2s ease-out;
+            -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+        }
+
+        button:hover::before {
+            -webkit-animation: sh02 0.5s 0s linear;
+            -moz-animation: sh02 0.5s 0s linear;
+            animation: sh02 0.5s 0s linear;
+        }
+
+        button::before {
+            content: '';
+            display: block;
+            width: 0px;
+            height: 86%;
+            position: absolute;
+            top: 7%;
+            left: 0%;
+            opacity: 0;
+            background: #fff;
+            box-shadow: 0 0 50px 30px #fff;
+            -webkit-transform: skewX(-20deg);
+            -moz-transform: skewX(-20deg);
+            -ms-transform: skewX(-20deg);
+            -o-transform: skewX(-20deg);
+            transform: skewX(-20deg);
+        }
+
+        @keyframes sh02 {
+            from {
+                opacity: 0;
+                left: 0%;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+                left: 100%;
+            }
+        }
+
+        button:active {
+            box-shadow: 0 0 0 0 transparent;
+            -webkit-transition: box-shadow 0.2s ease-in;
+            -moz-transition: box-shadow 0.2s ease-in;
+            transition: box-shadow 0.2s ease-in;
+        }
+        .caixa {
+            width: 500px;
+            height: 150px;
+            color: white;
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-sm pt-4">
+        <h1>Exemplo 54 Javascript</h1>
+        <h2>Classificação do IMC</h2>
+        <div class="form-group pt-4">
+            <label for="">Informe a altura</label>
+            <input type="text" name="txtAltura" id="txtAltura" class="form-control">
+        </div>
+        <div class="form-group pt-4">
+            <label for="">Informe o peso</label>
+            <input type="text" name="txtPeso" id="txtPeso" class="form-control">
+        </div>
+        <div class="form-group pt-4">
+            <button type="button" class="btn btn-primary form-control" onclick="calcularIMC()">Calcular o IMC</button>
+        </div>
+        <div class="form-group pt-4 caixa">
+            <h2 id="resultado"></h2>
+            <h2 id="classificacaoIMC"></h2>
+    </div>
+    <script>
+        function calcularIMC() {
+            var altura = document.getElementById("txtAltura").value;
+            var peso = document.getElementById("txtPeso").value;
+            var imc = peso / Math.pow(altura, 2);
+            var classificacaoIMC;
+            document.getElementById("resultado").innerHTML = "IMC: " + imc.toFixed(2)
+            if(imc <= 18.5){
+                classificacaoIMC = "Abaixo do peso"
+            } else if (imc > 18.5 && imc <= 24.9){
+                classificacaoIMC = "Peso normal"
+            } else if (imc > 24.9 && imc < 29.9){
+                classificacaoIMC = "Acima do peso"
+            } else {
+                classificacaoIMC = "Obesidade"                
+            }
+            document.getElementById("classificacaoIMC").innerHTML = classificacaoIMC;
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
